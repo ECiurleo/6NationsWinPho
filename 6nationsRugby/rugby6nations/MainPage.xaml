@@ -1,0 +1,181 @@
+﻿<!-- 
+    Copyright (c) 2011 Microsoft Corporation.  All rights reserved.
+    Use of this sample source code is subject to the terms of the Microsoft license 
+    agreement under which you licensed this sample source code and is provided AS-IS.
+    If you did not accept the terms of the license agreement, you are not authorized 
+    to use this sample source code.  For the terms of the license, please see the 
+    license agreement between you and Microsoft.
+    
+    To see all Code Samples for Windows Phone, visit http://go.microsoft.com/fwlink/?LinkID=219604
+-->
+<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls" 
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI" 
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions" 
+    x:Class="sixNationsRugby.MainPage"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+    <!--LayoutRoot is the root grid where all pagApplicationId="47fbfd6e-d2cb-4562-84df-2941949f0a5c"e content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+
+        <!--Fixtures HTML5-->
+
+        <controls:Panorama HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,0" Title="6 Nations 2014" VerticalAlignment="Top" Width="444" SelectionChanged="autoLoadFeed_SelectionChanged" Grid.RowSpan="2">
+            <controls:PanoramaItem Header="Fixtures 2014" Height="550" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <Grid HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="348">
+
+            		<phone:WebBrowser Source="fixtures.html" Margin="0,10,0,-6" Height="422" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.031"/>
+                    <UI:AdControl ApplicationId="47fbfd6e-d2cb-4562-84df-2941949f0a5c" AdUnitId="10140309" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="320" Margin="0,-43,0,0"/>
+
+            	</Grid>
+
+            </controls:PanoramaItem>
+
+            <!--News-->
+            <controls:PanoramaItem Header="News" Width="450"  >
+
+                <Grid x:Name="feedContentPanel" Grid.Row="1" Margin="0,-13,58,0" >
+
+                    <UI:AdControl ApplicationId="47fbfd6e-d2cb-4562-84df-2941949f0a5c" AdUnitId="10140309" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="320" Margin="0,-33,0,0"/>
+                  
+                    <Button Height="82" HorizontalAlignment="Left" Margin="164,-102,0,0" x:Name="loadFeedButton" VerticalAlignment="Top" BorderThickness="0" Click="loadFeedButton_Click">
+                        <Image Source="Resources\Images\Refresh.png"/>
+                    </Button>
+
+                    <ListBox x:Name="feedListBox" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,40,0,0" Width="360" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel VerticalAlignment="Top">
+                                    <TextBlock TextDecorations="Underline" FontSize="24" x:Name="feedTitle" TextWrapping="Wrap" Margin="12,0,0,0" HorizontalAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Text="{Binding Title.Text, Converter={StaticResource RssTextTrimmer}}" />
+                                    <TextBlock x:Name="feedSummary" TextWrapping="Wrap" Margin="12,0,0,0" Text="{Binding Summary.Text, Converter={StaticResource RssTextTrimmer}}" />
+                                    <TextBlock x:Name="feedPubDate" Foreground="{StaticResource PhoneSubtleBrush}" Margin="12,0,0,10" Text="{Binding PublishDate.DateTime}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <controls:PanoramaItem Header="Anthems" Width="450" Height="Auto" >
+                <Grid Height="Auto" HorizontalAlignment="Left" Margin="0,0,0,-4" VerticalAlignment="Top" Width="400">
+
+                    <!--ENGLAND-->
+                    <UI:AdControl ApplicationId="47fbfd6e-d2cb-4562-84df-2941949f0a5c" AdUnitId="10140309" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="320" Margin="0,-33,0,0"/>
+
+                    <!--ENGLAND-->
+                    <Button Margin="178,163,62,133" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/EngAnthem.xaml"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel>
+                            <Image Source="Resources\Images\eng.jpg" Stretch="Fill" Height="120" Width="80" />
+                        </StackPanel>
+                    </Button>
+                    <!--FRANCE-->
+                    <Button Margin="178,288,62,0" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/FraAnthem.xaml"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel>
+                            <Image Source="Resources\Images\fra.jpg" Stretch="Fill" Height="120" Width="80" />
+                        </StackPanel>
+                    </Button>
+                    <!--IRELAND-->
+                    <Button Margin="10,288,222,0" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/IreAnthem.xaml" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel>
+                            <Image Source="Resources\Images\ire.jpg" Stretch="Fill" Height="120" Width="80" />
+                        </StackPanel>
+                    </Button>
+                    <!--ITALY-->
+                    <Button Margin="178,15,62,259" Click="Button_Click" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/ItaAnthem.xaml"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel>
+                            <Image Source="Resources\Images\ita.jpg" Stretch="Fill" Height="120" Width="80" />
+                        </StackPanel>
+                    </Button>
+                    <!--SCOTLAND-->
+                    <Button Margin="10,163,222,133" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/ScoAnthem.xaml"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel>
+                            <Image Source="Resources\Images\sco.jpg" Stretch="Fill" Height="110" Width="80" RenderTransformOrigin="0.675,0" />
+                        </StackPanel>
+                    </Button>
+                    <!--WALES-->
+                    <Button  Margin="10,15,222,259" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/WalAnthem.xaml"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <StackPanel>
+                            <Image Source="Resources\Images\wal.jpg" Stretch="Fill" Height="120" Width="80" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Results HTML5-->
+
+            <controls:PanoramaItem Header="Results" Height="550" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+                <Grid HorizontalAlignment="Left" Height="426" VerticalAlignment="Top" Width="348">
+
+                    <phone:WebBrowser Source="results.html" Margin="0,10,0,-6" Height="422" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.031" IsScriptEnabled="True"/>
+                    <UI:AdControl ApplicationId="47fbfd6e-d2cb-4562-84df-2941949f0a5c" AdUnitId="10140309" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="320" Margin="0,-43,0,0"/>
+
+                </Grid>
+
+            </controls:PanoramaItem>
+
+
+        </controls:Panorama>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

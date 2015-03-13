@@ -1,0 +1,177 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="sixNationsRugby.ItaAnthem"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">
+            	<Run Text="6 Nations -"/>
+            	<Run Text=" "/>
+            	<Run Text="Anthems"/>
+            </TextBlock>
+            <TextBlock Text="Italian" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,72,10,-72">
+
+            <Canvas HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,0" VerticalAlignment="Top" Width="425">
+                <ScrollViewer Height="500" VerticalScrollBarVisibility="Auto">
+
+                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Width="425" >
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="        Fratelli d'Italia,"/>
+                	<LineBreak/>
+                	<Run Text="        l'Italia s'è desta,"/>
+                	<LineBreak/>
+                	<Run Text="        dell'elmo di Scipio"/>
+                	<LineBreak/>
+                	<Run Text="        s'è cinta la testa."/>
+                	<LineBreak/>
+                	<Run Text="        Dov'è la Vittoria?"/>
+                	<LineBreak/>
+                	<Run Text="        Le porga la chioma,"/>
+                	<LineBreak/>
+                	<Run Text="        ché schiava di Roma"/>
+                	<LineBreak/>
+                	<Run Text="        Iddio la creò."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="            CORO:"/>
+                	<LineBreak/>
+                	<Run Text="            Stringiamci a coorte,"/>
+                	<LineBreak/>
+                	<Run Text="            siam pronti alla morte."/>
+                	<LineBreak/>
+                	<Run Text="            Siam pronti alla morte,"/>
+                	<LineBreak/>
+                	<Run Text="            l'Italia chiamò."/>
+                	<LineBreak/>
+                	<Run Text="            Stringiamci a coorte,"/>
+                	<LineBreak/>
+                	<Run Text="            siam pronti alla morte."/>
+                	<LineBreak/>
+                	<Run Text="            Siam pronti alla morte,"/>
+                	<LineBreak/>
+                	<Run Text="            l'Italia chiamò!"/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="        Noi fummo da secoli[3]"/>
+                	<LineBreak/>
+                	<Run Text="        calpesti, derisi,"/>
+                	<LineBreak/>
+                	<Run Text="        perché non siam popolo,"/>
+                	<LineBreak/>
+                	<Run Text="        perché siam divisi."/>
+                	<LineBreak/>
+                	<Run Text="        Raccolgaci un'unica"/>
+                	<LineBreak/>
+                	<Run Text="        bandiera, una speme:"/>
+                	<LineBreak/>
+                	<Run Text="        di fonderci insieme"/>
+                	<LineBreak/>
+                	<Run Text="        già l'ora suonò."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="            CORO"/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="        Uniamoci, amiamoci,"/>
+                	<LineBreak/>
+                	<Run Text="        l'unione e l'amore"/>
+                	<LineBreak/>
+                	<Run Text="        rivelano ai popoli"/>
+                	<LineBreak/>
+                	<Run Text="        le vie del Signore."/>
+                	<LineBreak/>
+                	<Run Text="        Giuriamo far libero"/>
+                	<LineBreak/>
+                	<Run Text="        il suolo natio:"/>
+                	<LineBreak/>
+                	<Run Text="        uniti, per Dio,"/>
+                	<LineBreak/>
+                	<Run Text="        chi vincer ci può?"/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="            CORO"/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="        Dall'Alpi a Sicilia"/>
+                	<LineBreak/>
+                	<Run Text="        dovunque è Legnano,"/>
+                	<LineBreak/>
+                	<Run Text="        ogn'uom di Ferruccio"/>
+                	<LineBreak/>
+                	<Run Text="        ha il core, ha la mano,"/>
+                	<LineBreak/>
+                	<Run Text="        i bimbi d'Italia"/>
+                	<LineBreak/>
+                	<Run Text="        si chiaman Balilla,"/>
+                	<LineBreak/>
+                	<Run Text="        il suon d'ogni squilla"/>
+                	<LineBreak/>
+                	<Run Text="        i Vespri suonò."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="            CORO"/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="        Son giunchi che piegano"/>
+                	<LineBreak/>
+                	<Run Text="        le spade vendute:"/>
+                	<LineBreak/>
+                	<Run Text="        già l'Aquila d'Austria"/>
+                	<LineBreak/>
+                	<Run Text="        le penne ha perdute."/>
+                	<LineBreak/>
+                	<Run Text="        Il sangue d'Italia,"/>
+                	<LineBreak/>
+                	<Run Text="        il sangue Polacco,"/>
+                	<LineBreak/>
+                	<Run Text="        bevé, col cosacco,"/>
+                	<LineBreak/>
+                	<Run Text="        ma il cor le bruciò."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="            CORO"/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run/>
+                    </TextBlock>
+                </ScrollViewer>
+            </Canvas>
+
+        </Grid>
+        <UI:AdControl ApplicationId="6c8bd6de-c1a7-48d1-a37e-9468105d39ca" AdUnitId="10140309" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="320" Canvas.Top="-85" Margin="30,17,0,0" Grid.Row="1"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>

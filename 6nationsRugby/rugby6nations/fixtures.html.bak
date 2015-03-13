@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+  </head>
+  
+<link rel="stylesheet" href="Resources\CSS\style.css" />
+<body>
+ 
+<!-- Multiple tbody - WCAG 2.0 -->
+<table>
+	<tbody>
+    <th colspan="6">
+      <b>Sunday, 1st February</b>
+    </th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\walflag.png" /><br/>Wales
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\itaflag.png" /><br/>Italy
+      </td>
+    </tr>
+    <th colspan="6">(14:30 GMT)</th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\fraflag.png" /><br/>France
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\engflag.png" /><br/>England
+      </td>
+    </tr>
+    <th colspan="6">(17:00 GMT)
+    </th>
+
+
+    <tr>
+      <td> </td>
+    </tr>
+   </tbody>
+  
+  
+  <tbody>
+    <tr>
+      <th colspan="6">
+          <B>Sunday, 2nd February</B>
+      </th>
+    </tr>
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\ireflag.png" /><br/>Ireland
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\scoflag.png" /><br/>Scotland
+      </td>
+    </tr>
+    <th colspan="6">(15:00 GMT)</th>
+
+    <tr>
+      <td> </td>
+    </tr>  
+  </tbody>
+  
+
+<table>
+	<tbody>
+    <th colspan="6">
+      <b>Saturday, 8th February</b>
+    </th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\ireflag.png" /><br/>Ireland
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\walflag.png" /><br/>Wales
+      </td>
+    </tr>
+    <th colspan="6">(14:30 GMT)</th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\scoflag.png" /><br/>Scotland
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\engflag.png" /><br/>England
+      </td>
+    </tr>
+    <th colspan="6">(17:00 GMT)</th>
+
+
+    <tr>
+      <td> </td>
+    </tr>
+   </tbody>
+  
+  
+  <tbody>
+    <tr>
+      <th colspan="6">
+          <B>Sunday, 9th February</B>
+      </th>
+    </tr>
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\fraflag.png" /><br/>France
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\itaflag.png" /><br/>Italy
+      </td>
+    </tr>
+    <th colspan="6">(15:00 GMT)</th>
+
+    <tr>
+      <td>
+        <br />
+      </td>
+    </tr>  
+  </tbody>
+  
+  <table>
+	<tbody>
+    <th colspan="6">
+      <b>Friday, 21st February</b>
+    </th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\walflag.png" /><br/>Wales
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\fraflag.png" /><br/>France
+      </td>
+    </tr>
+    <th colspan="6">(20:00 GMT)</th>
+
+
+     <tr>
+      <td> </td>
+    </tr>
+   </tbody>
+  
+  
+  <tbody>
+
+  
+  <table>
+	<tbody>
+    <th colspan="6">
+      <b>Saturday 22 February</b>
+    </th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\itaflag.png" /><br/>Italy
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\scoflag.png" /><br/>Scotland
+      </td>
+    </tr>
+    <th colspan="6">(13:30 GMT)</th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\engflag.png" /><br/>England
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\ireflag.png" /><br/>Ireland
+      </td>
+    </tr>
+    <th colspan="6">(16:00 GMT)</th>
+
+
+    <tr>
+      <td> </td>
+    </tr>
+   </tbody>
+  
+  
+  <table>
+	<tbody>
+    <th colspan="6">
+      <b>Saturday, 8th March</b>
+    </th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\ireflag.png" /><br/>Ireland
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\itaflag.png" /><br/>Italy
+      </td>
+    </tr>
+    <th colspan="6">(14:30 GMT)</th>
+
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\scoflag.png" /><br/>Scotland
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\fraflag.png" /><br/>France
+      </td>
+    </tr>
+    <th colspan="6">(17:00 GMT)</th>
+
+
+    <tr>
+      <td> </td>
+    </tr>
+   </tbody>
+  
+  
+  <tbody>
+    <tr>
+      <th colspan="6">
+          <B>Sunday, 9th March</B>
+      </th>
+    </tr>
+
+    <tr>
+      <td width="50" colspan="1">
+        <img src="Resources\Images\engflag.png" /><br/>England
+      </td>
+
+      <td width="50" colspan="3">VS</td>
+
+      <td width="50" colspan="5">
+        <img src="Resources\Images\walflag.png" /><br/>Wales
+      </td>
+    </tr>
+    <th colspan="6">(15:00 GMT)</th>
+
+    <tr>
+      <td> </td>
+    </tr>  
+  </tbody>
+
+    <tbody>
+      <th colspan="6">
+        <b>Saturday, 15th March</b>
+      </th>
+
+
+      <tr>
+        <td width="50" colspan="1">
+          <img src="Resources\Images\itaflag.png" /><br/>Italy
+        </td>
+
+        <td width="50" colspan="3">VS</td>
+
+        <td width="50" colspan="5">
+          <img src="Resources\Images\engflag.png" /><br/>England
+        </td>
+      </tr>
+      <th colspan="6">(12:30 GMT)</th>
+
+
+      <tr>
+        <td width="50" colspan="1">
+          <img src="Resources\Images\walflag.png" /><br/>Wales
+        </td>
+
+        <td width="50" colspan="3">VS</td>
+
+        <td width="50" colspan="5">
+          <img src="Resources\Images\scoflag.png" /><br/>Scotland
+        </td>
+      </tr>
+      <th colspan="6">(14:45 GMT)</th>
+
+
+      <tr>
+        <td width="50" colspan="1">
+          <img src="Resources\Images\fraflag.png" /><br/>France
+        </td>
+
+        <td width="50" colspan="3">VS</td>
+
+        <td width="50" colspan="5">
+          <img src="Resources\Images\ireflag.png" /><br/>Ireland
+        </td>
+      </tr>
+      <th colspan="6">(17:00 GMT)</th>
+
+
+      <tr>
+        <td> </td>
+      </tr>
+    </tbody>
+
+
+</body>
+</html> 

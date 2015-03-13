@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link rel="stylesheet" href="Resources/CSS/style.css">
+
+    <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <!--link rel="stylesheet" href="Resources\CSS\style.css" /-->
+	  <script src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js'></script>
+	  <script src='http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.0.min.js'></script>
+	  <script>
+		function read(query, user, request) {
+
+		// Get access to the storage table
+		var tableService = new WindowsAzure.MobileServiceClient('https://sixnations.azure-mobile.net/', 'ytAZioMpsGFJFukIHxarxjxjnbqPVB91');
+		azure = tableService.getTable('sixnations_results');
+
+		// Define query to retrieve all for every year
+			var tableQuery = azure.where({
+				yearplayed: "2014"
+				}).read().done(function (results) {
+					$("#results").html("<h3>2014</h3><table>");
+					$("#results").append("<tr><td>Position</td><td>Team</td><td>Points</td><td>MP</td><td>W</td><td>D</td><td>L</td><td>GD</td></tr>");
+					$.each(results, function(countryIndex, country) {
+						$("#results").append("<tr><td>" + country.id + "</td><td>" + country.team + "</td><td>" + country.points + "</td><td>" + country.matchesplayed + "</td><td>" + country.wins + "</td><td>" + country.draws + "</td><td>" + country.loses + "</td><td>" +country.pointsdiff + "</td></tr>");
+					});
+
+					}, function (err) {
+					alert("Error: " + err);
+				});
+			}
+	  </script>
+  </head>
+  
+<body href="#"onload="read()">
+  <!--<button onclick="read()">Try it</button>/-->
+  <div id="results" data-win-control="WinJS.Binding.Template">
+  </div>
+  
+  <div>
+
+    <h3>2013</h3>
+    <table class="" height="114" width="300" >
+      <tbody>
+        <tr>
+          <td class="">Position</td>
+          <td class="">Team</td>
+          <td class="">Points</td>
+          <td class="">MP</td>
+          <td class="">W</td>
+          <td class="">D</td>
+          <td class="">L</td>
+          <td class="">GD</td>
+        </tr>
+        <tr>
+          <td class="">1</td>
+          <td class="">Wales</td>
+          <td class="">8</td>
+          <td class="">5</td>
+          <td class="">4</td>
+          <td class="">0</td>
+          <td class="">1</td>
+          <td class="">56</td>
+        </tr>
+        <tr>
+          <td class="">2</td>
+          <td class="">England</td>
+          <td class="">8</td>
+          <td class="">5</td>
+          <td class="">4</td>
+          <td class="">0</td>
+          <td class="">1</td>
+          <td class="">16</td>
+        </tr>
+        <tr>
+          <td class="">3</td>
+          <td class="">Scotland</td>
+          <td class="">4</td>
+          <td class="">5</td>
+          <td class="">2</td>
+          <td class="">0</td>
+          <td class="">4</td>
+          <td class="">-9</td>
+        </tr>
+        <tr>
+          <td class="">4</td>
+          <td class="">Italy</td>
+          <td class="">4</td>
+          <td class="">5</td>
+          <td class="">2</td>
+          <td class="">0</td>
+          <td class="">4</td>
+          <td class="">-36</td>
+        </tr>
+        <tr>
+          <td class="">5</td>
+          <td class="">Ireland</td>
+          <td class="">3</td>
+          <td class="">5</td>
+          <td class="">1</td>
+          <td class="">1</td>
+          <td class="">3</td>
+          <td class="">-9</td>
+        </tr>
+        <tr>
+          <td class="">6</td>
+          <td class="">France</td>
+          <td class="">3</td>
+          <td class="">5</td>
+          <td class="">1</td>
+          <td class="">1</td>
+          <td class="">3</td>
+          <td class="">-18</td>
+        </tr>
+      </tbody>
+    </table>
+    <p></p>
+  </div>
+    
+    
+    <h3>2012</h3>
+    <table class="" height="114" width="300">
+      <tbody>
+        <tr>
+          <td class="">Position</td>
+          <td class="">Team</td>
+          <td class="">Points</td>
+          <td class="">MP</td>
+          <td class="">W</td>
+          <td class="">D</td>
+          <td class="">L</td>
+          <td class="">GD</td>
+        </tr>
+        <tr>
+          <td class="">1</td>
+          <td class="">Wales</td>
+          <td class="">10</td>
+          <td class="">5</td>
+          <td class="">5</td>
+          <td class="">0</td>
+          <td class="">0</td>
+          <td class="">51</td>
+        </tr>
+        <tr>
+          <td class="">2</td>
+          <td class="">England</td>
+          <td class="">8</td>
+          <td class="">5</td>
+          <td class="">4</td>
+          <td class="">0</td>
+          <td class="">1</td>
+          <td class="">27</td>
+        </tr>
+        <tr>
+          <td class="">3</td>
+          <td class="">Ireland</td>
+          <td class="">5</td>
+          <td class="">5</td>
+          <td class="">2</td>
+          <td class="">1</td>
+          <td class="">2</td>
+          <td class="">27</td>
+        </tr>
+        <tr>
+          <td class="">4</td>
+          <td class="">France</td>
+          <td class="">5</td>
+          <td class="">5</td>
+          <td class="">2</td>
+          <td class="">1</td>
+          <td class="">2</td>
+          <td class="">15</td>
+        </tr>
+        <tr>
+          <td class="">5</td>
+          <td class="">Italy</td>
+          <td class="">2</td>
+          <td class="">5</td>
+          <td class="">1</td>
+          <td class="">0</td>
+          <td class="">4</td>
+          <td class="">-68</td>
+        </tr>
+        <tr>
+          <td class="">6</td>
+          <td class="">Scotland</td>
+          <td class="">0</td>
+          <td class="">5</td>
+          <td class="">0</td>
+          <td class="">0</td>
+          <td class="">5</td>
+          <td class="">-52</td>
+        </tr>
+      </tbody>
+    </table>
+    <p></p>
+  </div>
+
+</body>
+</html> 

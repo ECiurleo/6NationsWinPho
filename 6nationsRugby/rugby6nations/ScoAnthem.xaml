@@ -1,0 +1,125 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="sixNationsRugby.ScoAnthem"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">
+            	<Run Text="6 Nations -"/>
+            	<Run Text=" "/>
+            	<Run Text="Anthems"/>
+            </TextBlock>
+            <TextBlock Text="Scottish" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,72,10,-72">
+
+            <Canvas HorizontalAlignment="Left" Height="Auto" Margin="10,10,0,0" VerticalAlignment="Top" Width="436">
+                <ScrollViewer Height="500" VerticalScrollBarVisibility="Auto">
+
+                    <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="10" Width="425">
+                	<Run Text="O Flower of Scotland,"/>
+                	<LineBreak/>
+                	<Run Text="When will we see"/>
+                	<LineBreak/>
+                	<Run Text="Your like again,"/>
+                	<LineBreak/>
+                	<Run Text="That fought and died for,"/>
+                	<LineBreak/>
+                	<Run Text="Your wee bit Hill and Glen,"/>
+                	<LineBreak/>
+                	<Run Text="And stood against him,"/>
+                	<LineBreak/>
+                	<Run Text="Proud Edward's Army,"/>
+                	<LineBreak/>
+                	<Run Text="And sent him homeward,"/>
+                	<LineBreak/>
+                	<Run Text="Tae think again."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="The Hills are bare now"/>
+                	<LineBreak/>
+                	<Run Text=", And Autumn leaves"/>
+                	<LineBreak/>
+                	<Run Text="lie thick and still,"/>
+                	<LineBreak/>
+                	<Run Text="O'er land that is lost now,"/>
+                	<LineBreak/>
+                	<Run Text="Which those so dearly held,"/>
+                	<LineBreak/>
+                	<Run Text="That stood against him,"/>
+                	<LineBreak/>
+                	<Run Text="Proud Edward's Army,"/>
+                	<LineBreak/>
+                	<Run Text="And sent him homeward,"/>
+                	<LineBreak/>
+                	<Run Text="Tae think again."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="Those days are past now,"/>
+                	<LineBreak/>
+                	<Run Text="And in the past"/>
+                	<LineBreak/>
+                	<Run Text="they must remain,"/>
+                	<LineBreak/>
+                	<Run Text="But we can still rise now,"/>
+                	<LineBreak/>
+                	<Run Text="And be the nation again,"/>
+                	<LineBreak/>
+                	<Run Text="That stood against him,"/>
+                	<LineBreak/>
+                	<Run Text="Proud Edward's Army,"/>
+                	<LineBreak/>
+                	<Run Text="And sent him homeward,"/>
+                	<LineBreak/>
+                	<Run Text="Tae think again."/>
+                	<LineBreak/>
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="0 Flower of Scotland,"/>
+                	<LineBreak/>
+                	<Run Text="When will we see"/>
+                	<LineBreak/>
+                	<Run Text="your like again,"/>
+                	<LineBreak/>
+                	<Run Text="That fought and died for,"/>
+                	<LineBreak/>
+                	<Run Text="Your wee bit Hill and Glen,"/>
+                	<LineBreak/>
+                	<Run Text="And stood against him,"/>
+                	<LineBreak/>
+                	<Run Text="Proud Edward's Army,"/>
+                	<LineBreak/>
+                	<Run Text="And sent him homeward,"/>
+                	<LineBreak/>
+                	<Run Text="Tae think again. "/>
+                    </TextBlock>
+                </ScrollViewer>
+            </Canvas>
+
+        </Grid>
+        <UI:AdControl ApplicationId="6c8bd6de-c1a7-48d1-a37e-9468105d39ca" AdUnitId="10140309" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="320" Canvas.Top="-85" Margin="30,17,0,0" Grid.Row="1"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>
